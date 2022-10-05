@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#map {
+  height: 50vh;
+  width: 60vw;
+}

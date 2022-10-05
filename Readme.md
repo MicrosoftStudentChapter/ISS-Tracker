@@ -2,9 +2,10 @@
 
 This project aims to create a website which tracks the live position of the Internation Space Station using [this](https://wheretheiss.at/w/developer) API.
 
-Things to add:
+Issues: 
 - Call the api to get data and print it in console.
-- Add a map interface in a box, use leaflet.js or mapbox.
+- Explore option in Leaflet.js docs to make map more interactive.
+- Center the div containing the map.
 - Add styling and css to the page to make it look better.
 - Add a pointer to the map based on a location.
 - Call the API every 3 seconds and update the pointer position to make the space station look like its moving.
