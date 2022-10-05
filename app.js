@@ -9,6 +9,27 @@ const map = L.map("map", {
   ],
 });
 
+const apiCall = ()=>{
+  fetch("https://api.wheretheiss.at/v1/satellites/25544")
+        .then((res) => {
+          return res.json()
+          })
+          .then((data) => {
+            console.log({
+              "latitude": data.latitude,
+              "longitude": data.longitude,
+              "altitude": data.altitude,
+              "velocity": data.velocity,
+              "units": "kilometers"
+          })           
+            })
+            .catch((error) => {
+                console.log(error)
+            });  
+}
+
+apiCall();
+
 map.fitWorld();
 
 L.tileLayer(
