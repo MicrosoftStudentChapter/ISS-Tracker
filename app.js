@@ -17,3 +17,12 @@ L.tileLayer(
 ).addTo(map);
 
 //dont change default tile view in line 14-17
+var IssIcon = L.icon({
+  iconUrl: 'iss.png',
+  iconSize:     [15, 15], // size of the icon
+  shadowSize:   [50, 64], // size of the shadow
+  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62],  // the same for the shadow
+  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+})
+L.marker([51.5, -0.09], {icon: IssIcon}).addTo(map);
