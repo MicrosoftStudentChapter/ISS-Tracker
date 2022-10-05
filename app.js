@@ -16,4 +16,10 @@ L.tileLayer(
   { foo: "bar" }
 ).addTo(map);
 
+
+const addPointer = (lat, long) => {
+  L.marker([lat, long]).addTo(map)
+    .openPopup();
+}
+
 //dont change default tile view in line 14-17
