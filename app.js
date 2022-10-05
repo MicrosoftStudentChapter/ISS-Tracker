@@ -10,6 +10,7 @@ const map = L.map("map", {
 });
 
 const apiCall = ()=>{
+  let value = {}
   fetch("https://api.wheretheiss.at/v1/satellites/25544")
         .then((res) => {
           return res.json()
@@ -21,11 +22,19 @@ const apiCall = ()=>{
               "altitude": data.altitude,
               "velocity": data.velocity,
               "units": "kilometers"
-          })           
+          })     
+          value = {
+            "latitude": data.latitude,
+            "longitude": data.longitude,
+            "altitude": data.altitude,
+            "velocity": data.velocity,
+            "units": "kilometers"
+        }     
             })
             .catch((error) => {
                 console.log(error)
-            });  
+            }); 
+    return value 
 }
 
 apiCall();
