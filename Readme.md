@@ -72,6 +72,12 @@ git checkout -b <your_branch_name>
 git add . 
 ```
 
+//optional step to check whether the files changed have been added or not.
+
+```
+git status
+```
+
 **10.** Commit your changes .
 
 ```
